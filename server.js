@@ -33,8 +33,13 @@ app.post("/contact", extras.throttle(), function (req, res) {
     subject: "Contact Form Submission",
     text: comments
   }, function (err) {
-    res.status(err ? 500 : 200).end();
-    console.error(err);
+    if (err) {
+      console.error(err);
+      res.status(500);
+    } else {
+      res.status(200);
+    }
+    res.end();
   });
 });
 
