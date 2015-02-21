@@ -1,0 +1,40 @@
+.social-icons {
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 0 8px;
+    font-size: 30px;
+    color: #fff;
+    transition: background .2s;
+    border-radius: 50%;
+
+    + a {
+      margin-left: 10px;
+    }
+  }
+
+  .github {
+    background: #333;
+
+    &:hover {
+      background: lighten(#333, 5%);
+    }
+  }
+
+  .twitter {
+    background: #00aced;
+
+    &:hover {
+      background: lighten(#00aced, 5%);
+    }
+  }
+
+  .linkedin {
+    background: #007bb6;
+
+    &:hover {
+      background: lighten(#007bb6, 5%);
+    }
+  }
+}
