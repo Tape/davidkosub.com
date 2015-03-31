@@ -28,7 +28,7 @@ app.post("/contact", extras.throttle(), function (req, res) {
   }
 
   transporter.sendMail({
-    from: name + "<" + email + ">",
+    from: name + " <" + email + ">",
     to: "David Kosub <dave@davidkosub.com>",
     subject: "Contact Form Submission",
     text: comments
